@@ -33,8 +33,8 @@ function addKeyAndValue(arr, key, value) {
 
   arr.forEach(function (title, jobName) {
     let newObj = {};
-    newObj.assign(key, title);
-    newObj.assign(value, jobName);
+    newObj[key] = title;
+    newObj[value] = jobName;
     newArr.push(newObj);
   });
   return newArr;
