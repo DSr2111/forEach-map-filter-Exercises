@@ -22,8 +22,15 @@ Examples:
     onlyEvenValues([5,1,2,3,10]) // [2,10]
 
 */
-function onlyEvenValues(arr) {}
-
+function onlyEvenValues(arr) {
+  const newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2) {
+      newArr.push(arr[i]);
+    }
+    return newArr;
+  }
+}
 /*
 Write a function called showFirstAndLast which accepts an array of strings and returns a new array with only the first and last character of each string.
 
