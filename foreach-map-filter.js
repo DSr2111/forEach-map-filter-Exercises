@@ -7,9 +7,11 @@ Examples:
 
 */
 function doubleValues(arr) {
-  arr.map(function () {
-    return arr[i] * 2;
-  });
+  const newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    newArr.push(arr[i] * 2);
+  }
+  return newArr;
 }
 
 /*
