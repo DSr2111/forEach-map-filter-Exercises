@@ -1,30 +1,23 @@
 function doubleValues(arr) {
-  const newArr = [];
-  for (let i = 0; i < arr.length; i++) {
-    newArr.push(arr[i] * 2);
-  }
+  let newArr = [];
+  arr.forEach(function (num) {
+    newArr.push(num * 2);
+  });
   return newArr;
 }
 
 function onlyEvenValues(arr) {
-  const newArr = [];
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] % 2 === 0) {
-      newArr.push(arr[i]);
+  let newArr = [];
+  arr.forEach(function (num) {
+    if (num % 2 === 0) {
+      newArr.push(num);
     }
-  }
+  });
   return newArr;
 }
-/*
-Write a function called showFirstAndLast which accepts an array of strings and returns a new array with only the first and last character of each string.
 
-Examples:
-    showFirstAndLast(['colt','matt', 'tim', 'test']) // ["ct", "mt", "tm", "tt"]
-    showFirstAndLast(['hi', 'goodbye', 'smile']) // ['hi', 'ge', 'se']
-
-*/
 function showFirstAndLast(arr) {
-  newArr = [];
+  let newArr = [];
   for (let i = 0; i < arr.length; i++) {
     let first = arr[i].charAt(0);
     let last = arr[i].charAt(arr[i].length - 1);
