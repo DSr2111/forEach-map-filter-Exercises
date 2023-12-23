@@ -18,11 +18,13 @@ function onlyEvenValues(arr) {
 
 function showFirstAndLast(arr) {
   let newArr = [];
-  for (let i = 0; i < arr.length; i++) {
-    let first = arr[i].charAt(0);
-    let last = arr[i].charAt(arr[i].length - 1);
+
+  arr.forEach(function (str) {
+    let first = str.charAt(0);
+    let last = str.charAt(str.length - 1);
+
     newArr.push(`${first}${last}`);
-  }
+  });
   return newArr;
 }
 
