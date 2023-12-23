@@ -29,15 +29,10 @@ function showFirstAndLast(arr) {
 }
 
 function addKeyAndValue(arr, key, value) {
-  let newArr = [];
-
-  arr.forEach(function (title, jobName) {
-    let newObj = {};
-    newObj[key] = title;
-    newObj[value] = jobName;
-    newArr.push(newObj);
+  arr.forEach(function (val) {
+    val[key] = value;
   });
-  return newArr;
+  return arr;
 }
 
 /*
