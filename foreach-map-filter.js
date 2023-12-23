@@ -26,7 +26,7 @@ Examples:
 function showFirstAndLast(arr) {
   newArr = [];
   for (let i = 0; i < arr.length; i++) {
-    newArr.push(arr[i[0]]);
+    newArr.push(arr[i].charAt(0));
   }
   return newArr;
 }
