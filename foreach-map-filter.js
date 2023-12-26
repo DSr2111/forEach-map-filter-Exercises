@@ -140,10 +140,11 @@ Examples:
 
 function removeVowels(str) {
   const vowels = "aeiou";
-  return str.toLowerCase
+  return str
+    .toLowerCase()
     .split("")
     .filter(function (char) {
-      return vowels.indexOf(char) == -1; // index of -1 means there are no vowels in returned string
+      return vowels.indexOf(char) == -1; // index of -1 means there are no vowel characters in returned string
     })
     .join("");
 }
@@ -156,4 +157,12 @@ Examples:
     doubleOddNumbers([4,4,4,4,4]) // []
 */
 
-function doubleOddNumbers(arr) {}
+function doubleOddNumbers(arr) {
+  doubledArr = arr.map(function (num) {
+    num * 2;
+  });
+
+  return doubledArr.filter(function (doubled) {
+    if (doubled % 3 === 0) return;
+  });
+}
