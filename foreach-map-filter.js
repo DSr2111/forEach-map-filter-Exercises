@@ -70,6 +70,7 @@ Examples:
 
 function valTimesIndex(arr) {
   return arr.map(function (num, idx) {
+    console.log(num, idx);
     return num * idx;
   });
 }
