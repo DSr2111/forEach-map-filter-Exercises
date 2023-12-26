@@ -69,8 +69,8 @@ Examples:
 */
 
 function valTimesIndex(arr) {
-  arr.map(function (num, index) {
-    return num * index;
+  return arr.map(function (num, idx) {
+    return num * idx;
   });
 }
 
