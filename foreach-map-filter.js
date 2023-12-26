@@ -54,14 +54,6 @@ function vowelCount(str) {
   return vowelsCountObj;
 }
 
-/*
-Write a function called doubleValuesWithMap which accepts an array and returns a new array with all the values in the array passed to the function doubled
-
-Examples:
-    doubleValuesWithMap([1,2,3]) // [2,4,6]
-    doubleValuesWithMap([1,-2,-3]) // [2,-4,-6]
-*/
-
 function doubleValuesWithMap(arr) {
   arr.map(function (num) {
     return num * 2;
@@ -76,7 +68,11 @@ Examples:
     valTimesIndex([1,-2,-3]) // [0,-2,-6]
 */
 
-function valTimesIndex(arr) {}
+function valTimesIndex(arr) {
+  arr.map(function (num, index) {
+    return num * index;
+  });
+}
 
 /*
 Write a function called extractKey which accepts an array of objects and some key and returns a new array with the value of that key in each object.
