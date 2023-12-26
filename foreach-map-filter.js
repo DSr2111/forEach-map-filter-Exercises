@@ -160,9 +160,9 @@ Examples:
 function doubleOddNumbers(arr) {
   arr
     .map(function (num) {
-      num * 2;
+      return num * 2;
     })
-    .filter(function (val) {
-      if (val % 3 === 0) return;
+    .filter(function (num) {
+      return num % 3 === 0;
     });
 }
