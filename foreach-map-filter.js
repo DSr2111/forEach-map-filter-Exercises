@@ -97,7 +97,7 @@ Examples:
 
 function extractFullName(arr) {
   return arr.map(function (obj) {
-    return `${obj.first} ${obj.last}`;
+    return `${obj.first} ${obj.last}`; //backticks ftw
   });
 }
 
@@ -108,7 +108,13 @@ Examples:
     filterByValue([{first: 'Elie', last:"Schoppik"}, {first: 'Tim', last:"Garcia", isCatOwner: true}, {first: 'Matt', last:"Lane"}, {first: 'Colt', last:"Steele", isCatOwner: true}], 'isCatOwner') // [{first: 'Tim', last:"Garcia", isCatOwner: true}, {first: 'Colt', last:"Steele", isCatOwner: true}]
 */
 
-function filterByValue(arr, key) {}
+function filterByValue(arr, key) {
+  return arr.filter(function (obj) {
+    if (obj[key] === key) {
+      return obj;
+    }
+  });
+}
 
 /*
 Write a function called find which accepts an array and a value and returns the first element in the array that has the same value as the second parameter or undefined if the value is not found in the array.
