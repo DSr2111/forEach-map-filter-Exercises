@@ -110,7 +110,7 @@ Examples:
 
 function filterByValue(arr, key) {
   return arr.filter(function (obj) {
-    if (obj[key] === key) {
+    if (obj[key] !== undefined) {
       return obj;
     }
   });
