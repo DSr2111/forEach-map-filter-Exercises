@@ -113,7 +113,7 @@ Examples:
 function find(arr, searchValue) {
   return arr.filter(function (el) {
     return el === searchValue;
-  });
+  })[0];
 }
 
 /*
@@ -123,7 +123,11 @@ Examples:
     findInObj([{first: 'Elie', last:"Schoppik"}, {first: 'Tim', last:"Garcia", isCatOwner: true}, {first: 'Matt', last:"Lane"}, {first: 'Colt', last:"Steele", isCatOwner: true}], 'isCatOwner',true) // {first: 'Tim', last:"Garcia", isCatOwner: true}
 */
 
-function findInObj(arr, key, searchValue) {}
+function findInObj(arr, key, searchValue) {
+  return arr.filter(function (obj) {
+    return obj[key] === searchValue;
+  })[0];
+}
 
 /*
 Write a function called removeVowels which accepts a string and returns a new string with all of the vowels (both uppercased and lowercased) removed. Every character in the new string should be lowercased.
