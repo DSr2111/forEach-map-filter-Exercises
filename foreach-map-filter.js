@@ -139,14 +139,13 @@ Examples:
 */
 
 function removeVowels(str) {
-  const vowelsUpper = "AEIOU";
-  const vowelsLower = "aeiou";
-  removeVowelsArr = Array.from(str);
-
-  return removeVowelsArr.filter(function (char) {
-    if (char) {
-    }
-  });
+  const vowels = "aeiou";
+  return str.toLowerCase
+    .split("")
+    .filter(function (char) {
+      return vowels.indexOf(char) == -1; // index of -1 means there are no vowels in returned string
+    })
+    .join("");
 }
 
 /*
