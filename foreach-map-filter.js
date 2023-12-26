@@ -96,7 +96,9 @@ Examples:
 */
 
 function extractFullName(arr) {
-  arr;
+  return arr.map(function (obj) {
+    return `${obj.first} ${obj.last}`;
+  });
 }
 
 /*
