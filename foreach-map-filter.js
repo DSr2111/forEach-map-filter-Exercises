@@ -88,25 +88,11 @@ function extractKey(arr, key) {
   });
 }
 
-/*
-Write a function called extractFullName which accepts an array of objects and returns a new array with the value of the key with a name of "first" and the value of a key with the name of  "last" in each object, concatenated together with a space. 
-
-Examples:
-    extractFullName([{first: 'Elie', last:"Schoppik"}, {first: 'Tim', last:"Garcia"}, {first: 'Matt', last:"Lane"}, {first: 'Colt', last:"Steele"}]) // ['Elie Schoppik', 'Tim Garcia', 'Matt Lane', 'Colt Steele']
-*/
-
 function extractFullName(arr) {
   return arr.map(function (obj) {
     return `${obj.first} ${obj.last}`; //backticks ftw
   });
 }
-
-/*
-Write a function called filterByValue which accepts an array of objects and a key and returns a new array with all the objects that contain that key.
-
-Examples:
-    filterByValue([{first: 'Elie', last:"Schoppik"}, {first: 'Tim', last:"Garcia", isCatOwner: true}, {first: 'Matt', last:"Lane"}, {first: 'Colt', last:"Steele", isCatOwner: true}], 'isCatOwner') // [{first: 'Tim', last:"Garcia", isCatOwner: true}, {first: 'Colt', last:"Steele", isCatOwner: true}]
-*/
 
 function filterByValue(arr, key) {
   return arr.filter(function (obj) {
@@ -124,7 +110,11 @@ Examples:
     find([1,2,3,4,5], 10) // undefined
 */
 
-function find(arr, searchValue) {}
+function find(arr, searchValue) {
+  return arr.filter(function (el) {
+    if (el.indexOf(searchValue)) return;
+  });
+}
 
 /*
 Write a function called findInObj which accepts an array of objects, a key, and some value to search for and returns the first found value in the array.
