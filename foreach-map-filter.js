@@ -29,8 +29,9 @@ function showFirstAndLast(arr) {
 }
 
 function addKeyAndValue(arr, key, value) {
-  arr.forEach(function (val) {
-    val[key] = value;
+  arr.forEach(function (obj) {
+    //changed from val to obj to better represent the obj in the array
+    obj[key] = value; //assigns value of 'value' param to key in obj
   });
   return arr;
 }
@@ -45,7 +46,23 @@ Examples:
     vowelCount('hmmm') // {};
     vowelCount('I Am awesome and so are you') // {i: 1, a: 4, e: 3, o: 3, u: 1};
 */
-function vowelCount(str) {}
+function vowelCount(str) {
+  let vowelsCountObj = {};
+  const vowels = "aeiou";
+  strArr = str.split("");
+
+  strArr.forEach(function (char) {
+    let lowerCaseChar = char.toLowerCase();
+    if (vowels.indexOf(lowerCaseChar) !== -1) {
+      if (vowelsCountObj[lowerCaseChar]) {
+        vowelsCountObj[lowerCaseChar]++;
+      } else {
+        vowelsCountObj[lowerCaseChar] = 1;
+      }
+    }
+  });
+  return vowelsCountObj;
+}
 
 /*
 Write a function called doubleValuesWithMap which accepts an array and returns a new array with all the values in the array passed to the function doubled
