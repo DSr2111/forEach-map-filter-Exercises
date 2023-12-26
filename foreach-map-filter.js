@@ -158,11 +158,11 @@ Examples:
 */
 
 function doubleOddNumbers(arr) {
-  doubledArr = arr.map(function (num) {
-    num * 2;
-  });
-
-  return doubledArr.filter(function (doubled) {
-    if (doubled % 3 === 0) return;
-  });
+  arr
+    .map(function (num) {
+      num * 2;
+    })
+    .filter(function (val) {
+      if (val % 3 === 0) return;
+    });
 }
