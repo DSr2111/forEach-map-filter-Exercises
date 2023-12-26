@@ -112,7 +112,7 @@ Examples:
 
 function find(arr, searchValue) {
   return arr.filter(function (el) {
-    if (el.indexOf(searchValue)) return;
+    return el === searchValue;
   });
 }
 
